@@ -50,3 +50,11 @@
   font-size: 12px;
   gap: 5px;
 }
+
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  padding: 30px;
+  gap: 20px;
+}

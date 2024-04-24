@@ -159,13 +159,18 @@ function Home() {
         {/* You have no projects yet. Add a project to get started. */}
         <div className="wrapper">
           {projects.map((project) => (
-            <ProjectCard key={project._id} title={project.title} />
+            <ProjectCard
+              key={project._id}
+              id={project._id}
+              title={project.title}
+              model={project.model}
+            />
           ))}
         </div>
       </div>
       <iframe
         id="chatbot-iframe"
-        src="http://127.0.0.1:5500/?objectId=66262a4b907607d80ea502ee"
+        src="https://6628eaf1b5dff0007908d133--bright-kitsune-545e73.netlify.app/?objectId=66262a4b907607d80ea502ee"
         width="380px"
         height="480px"
         frameborder="0"
