@@ -20,13 +20,13 @@ function NavBar() {
           <div className="SideDrawer__header">
             <div className="logo">
               <img
-                src={require("../../../assets/images/tallentor-digital.png")}
+                src={require("../../../assets/images/logo.png")}
                 alt="logo"
               />
             </div>
           </div>
           <Typography className="typography" sx={{ color: "white" }}>
-            Chatbot Ai
+            Chatbot
           </Typography>
         </div>
         <div className="navbar__right">

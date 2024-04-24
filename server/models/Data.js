@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
 const dataSchema = new mongoose.Schema({
-  id: {
-    type: Number,
+  title: {
+    type: String,
     required: true,
   },
   model: {

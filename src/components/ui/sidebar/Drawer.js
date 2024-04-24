@@ -15,34 +15,34 @@ function Drawer() {
         <div className="SideDrawer__body__list">
           <div className="SideDrawer__body__item">
             <div className="nav_list">
-              <DashboardIcon style={{ color: "white", fontSize: 20 }} />
+              <DashboardIcon style={{ color: "black", fontSize: 20 }} />
               <a href="index.jsx">Dashboard</a>
             </div>
             <div className="nav_list">
               <AccountTreeIcon
                 size={18}
-                style={{ color: "white", fontSize: 20 }}
+                style={{ color: "black", fontSize: 20 }}
               />
-              <a href="index.jsx">Projects</a>
+              <a href="/projects">Projects</a>
             </div>
             <div className="nav_list">
               <SettingsIcon
                 size={14}
-                style={{ color: "white", fontSize: 20 }}
+                style={{ color: "black", fontSize: 20 }}
               />
               <a href="index.jsx">Settings</a>
             </div>
             <div className="nav_list">
               <HeadphonesIcon
                 size={14}
-                style={{ color: "white", fontSize: 20 }}
+                style={{ color: "black", fontSize: 20 }}
               />
               <a href="index.jsx">Support</a>
             </div>
             <div className="nav_list">
               <AssignmentTurnedInIcon
                 size={14}
-                style={{ color: "white", fontSize: 20 }}
+                style={{ color: "black", fontSize: 20 }}
               />
               <a href="index.jsx">Tasks</a>
             </div>
