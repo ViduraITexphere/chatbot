@@ -18,13 +18,16 @@ function Home() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/insertData", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ title, model }),
-      });
+      const response = await fetch(
+        "https://chatbot-1-o9pg.onrender.com/insertData",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ title, model }),
+        }
+      );
 
       if (response.ok) {
         console.log("Data submitted successfully");
@@ -41,7 +44,10 @@ function Home() {
   // Fetch projects from the server
   const fetchProjects = async () => {
     try {
-      const response = await fetch("http://localhost:5000/getProjects");
+      const response = await fetch(
+        "https://chatbot-1-o9pg.onrender.com/getProjects"
+        // "http://localhost:5000/getProjects"
+      );
       if (response.ok) {
         const data = await response.json();
         setProjects(data); // Update projects state with fetched data
@@ -80,13 +86,14 @@ function Home() {
               margin="normal"
               sx={{
                 "& .MuiInputLabel-root": {
-                  fontSize: "14px", // Adjust the font size as needed
+                  fontSize: "12px", // Adjust the font size as needed
                   fontFamily: "Inter, sans-serif", // Use Inter font with fallback to sans-serif
                   fontWeight: 500, // Adjust the font weight as needed
                 },
                 "& .MuiInputBase-input": {
-                  fontSize: "14px", // Adjust the font size as needed
-                  fontFamily: "Inter, sans-serif", // Use Inter font with fallback to sans-serif
+                  fontSize: "14px",
+                  fontFamily: "Inter, sans-serif",
+                  padding: "12px 14px",
                 },
               }}
             />
@@ -99,13 +106,14 @@ function Home() {
               margin="normal"
               sx={{
                 "& .MuiInputLabel-root": {
-                  fontSize: "14px", // Adjust the font size as needed
+                  fontSize: "12px", // Adjust the font size as needed
                   fontFamily: "Inter, sans-serif", // Use Inter font with fallback to sans-serif
                   fontWeight: 500, // Adjust the font weight as needed
                 },
                 "& .MuiInputBase-input": {
-                  fontSize: "14px", // Adjust the font size as needed
-                  fontFamily: "Inter, sans-serif", // Use Inter font with fallback to sans-serif
+                  fontSize: "14px",
+                  fontFamily: "Inter, sans-serif",
+                  padding: "12px 14px",
                 },
               }}
             />

@@ -34,3 +34,50 @@ exports.getProjects = async (req, res) => {
     res.status(500).send("Error fetching projects");
   }
 };
+
+// Update project data in the database
+exports.updateProject = async (req, res) => {
+  try {
+    const { id } = req.params;
+    console.log("Updating project with ID:🚀", id);
+    const { title, model } = req.body;
+    const updatedData = { title, model };
+
+    await Data.findByIdAndUpdate(id, updatedData);
+    console.log("Project updated successfully with ID:", id);
+
+    res.send("Project updated successfully with ID: " + id);
+  } catch (error) {
+    console.error("Error updating project:", error);
+    res.status(500).send("Error updating project");
+  }
+};
+// Fetch project data for updating
+exports.getProjectsToUpdate = async (req, res) => {
+  console.log("Fetching projects to update");
+  try {
+    const projectId = req.params.id;
+    console.log("Fetching project data for ID:", projectId);
+    console.log("Fetching project data for ID:", projectId);
+    const project = await Data.findById(projectId); // Fetch project data by ID
+    // console.log("Project data:", project);
+    res.json(project); // Send the project data as JSON response
+  } catch (error) {
+    console.error("Error fetching project data:", error);
+    res.status(500).send("Error fetching project data");
+  }
+};
+
+// Delete project data from the database
+exports.deleteProject = async (req, res) => {
+  try {
+    const { id } = req.params;
+    await Data.findByIdAndDelete(id);
+    console.log("Project deleted successfully with ID:", id);
+
+    res.send("Project deleted successfully with ID: " + id);
+  } catch (error) {
+    console.error("Error deleting project:", error);
+    res.status(500).send("Error deleting project");
+  }
+};

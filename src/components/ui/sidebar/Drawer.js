@@ -2,11 +2,12 @@ import React from "react";
 import "./Drawer.css";
 
 // mui icons
-import DashboardIcon from "@mui/icons-material/Dashboard";
+import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import SettingsIcon from "@mui/icons-material/Settings";
 import HeadphonesIcon from "@mui/icons-material/Headphones";
 import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
+import EqualizerRoundedIcon from "@mui/icons-material/EqualizerRounded";
 
 function Drawer() {
   return (
@@ -15,36 +16,43 @@ function Drawer() {
         <div className="SideDrawer__body__list">
           <div className="SideDrawer__body__item">
             <div className="nav_list">
-              <DashboardIcon style={{ color: "black", fontSize: 20 }} />
-              <a href="index.jsx">Dashboard</a>
+              <HomeRoundedIcon style={{ color: "#494949", fontSize: 20 }} />
+              <a href="/">Dashboard</a>
             </div>
             <div className="nav_list">
               <AccountTreeIcon
                 size={18}
-                style={{ color: "black", fontSize: 20 }}
+                style={{ color: "#494949", fontSize: 20 }}
               />
               <a href="/projects">Projects</a>
             </div>
             <div className="nav_list">
               <SettingsIcon
                 size={14}
-                style={{ color: "black", fontSize: 20 }}
+                style={{ color: "#494949", fontSize: 20 }}
               />
               <a href="index.jsx">Settings</a>
             </div>
             <div className="nav_list">
               <HeadphonesIcon
                 size={14}
-                style={{ color: "black", fontSize: 20 }}
+                style={{ color: "#494949", fontSize: 20 }}
               />
               <a href="index.jsx">Support</a>
             </div>
             <div className="nav_list">
               <AssignmentTurnedInIcon
                 size={14}
-                style={{ color: "black", fontSize: 20 }}
+                style={{ color: "#494949", fontSize: 20 }}
               />
               <a href="index.jsx">Tasks</a>
+            </div>
+            <div className="nav_list">
+              <EqualizerRoundedIcon
+                size={14}
+                style={{ color: "#494949", fontSize: 20 }}
+              />
+              <a href="index.jsx">Analytics</a>
             </div>
           </div>
         </div>

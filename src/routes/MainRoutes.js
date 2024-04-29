@@ -4,6 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home.js";
 import MainLayout from "../components/layout/MainLayout";
 import Projects from "../pages/Projects.js";
+import Update from "../pages/Update.js";
 
 const MainRoutes = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const MainRoutes = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/update/:id",
+        element: <Update />,
       },
     ],
   },
